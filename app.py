@@ -21,7 +21,7 @@ def translate_text(text: str, target_lang: str) -> str:
         return text
     prompt = f"Translate the following text into {target_lang}. Output ONLY the translated text, no quotes or commentary.\n\n{text}"
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.6-flash",
         contents=prompt
     )
     return response.text.strip()
