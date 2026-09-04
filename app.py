@@ -26,7 +26,7 @@ def translate_text(text: str, target_lang: str) -> str:
     )
     return response.text.strip()
 
-target_language = st.sidebar.selectbox("Target Language", ["Spanish", "French", "German", "Italian", "Portuguese", "Japanese", "Chinese"])
+target_language = st.sidebar.selectbox("Target Language", ["Spanish", "French", "German", "Italian", "Portuguese", "Japanese", "Romanian", "Chinese"])
 uploaded_file = st.file_uploader("Upload PDF File", type=["pdf"])
 
 if uploaded_file and st.button("Translate PDF"):
